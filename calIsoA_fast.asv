@@ -1,14 +1,10 @@
 function [index_IsoA,density] = calIsoA_fast(xy_deg,n,e,isPlot)
-% calIsoA_fast  Compute ISOA of fixational eye movements with fast bivariate kernel density estimator
-%
-% INPUTS:   xy_deg - an 2 by N array with continuous data
-%           n - size of the n by n grid over which the density is computed
-%               n has to be a power of 2, otherwise n=2^ceil(log2(n))
-%           e - allowable error to find the probability density boundary in
-%               binary search
+% INPUTS:    xy_deg - an 2 by N array with continuous data
+%            n - size of the n by n grid over which the density is computed
+%                n has to be a power of 2, otherwise n=2^ceil(log2(n))
 % OUTPUT:   index_IsoA - the Isoline Area
 %           density - an n by n matrix containing the density values over the n by n grid
-%
+
 % Reference：
 % Zdravko Botev (2021). kernel density estimation
 % (https://www.mathworks.com/matlabcentral/fileexchange/17204-kernel-density-estimation),

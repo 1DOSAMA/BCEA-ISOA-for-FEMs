@@ -1,4 +1,16 @@
-function [index_IsoA] = calIsoA(xy_deg,n,e,isPlot)
+function [index_IsoA,density] = calIsoA(xy_deg,n,e,isPlot)
+% calIsoA  Compute IsolineArea of fixational eye movements 
+%
+% INPUTS:    xy_deg - an 2 by N array with continuous data
+%            n - size of the n by n grid over which the density is computed
+%                n has to be a power of 2, otherwise n=2^ceil(log2(n))
+%            e - allowable error to find the probability density boundary in
+%               binary search
+% OUTPUT:   index_IsoA - the Isoline Area
+%           density - an n by n matrix containing the density values over the n by n grid
+%
+% 2021.11.20 by CH Du.
+
 %The dafault limits of the bounding box over which the density is computed are computed as: 
 %(or you can define it by yourself)
 MAX=max(xy_deg,[],2); MIN=min(xy_deg,[],2); Range=MAX-MIN;
@@ -11,6 +23,7 @@ Y1 = linspace(MIN_XY(2),MAX_XY(2),n);
 xi = [x1(:) x2(:)];
 [f,xr,bw] = ksdensity(xy_deg',xi);
 p_ksd = reshape(f,[n,n]);
+density = p_ksd;
 % Isoline Area
 mesh_area = prod((MAX_XY-MIN_XY)/n); 
 p_edge_IsA1 = findby2(p_ksd,0.682,mesh_area,e);

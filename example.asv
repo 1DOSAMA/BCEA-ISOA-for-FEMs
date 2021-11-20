@@ -29,8 +29,8 @@ xy_deg(:,del)=[];
 % default probability to plot is 0.682(red line) and 0.95(blue line).
 % BCEA
 figure;
-[BCEA_formula,BCEA] = calBCEA(xy_deg,3500,10^-6,1); % biger n, closer between BCEA and BCEA_formula
-disp((BCEA-BCEA_formula)/BCEA_formula); %nearly 0.05%
+[BCEA_formula,BCEA] = calBCEA(xy_deg,3500,10^-6,1); % grid by n*n, but infact you can calculate density
+disp((BCEA-BCEA_formula)/BCEA_formula);
 % ISOA
 figure;
 ISOA = calIsoA(xy_deg,2^11,10^-5,1);
@@ -38,4 +38,4 @@ ISOA = calIsoA(xy_deg,2^11,10^-5,1);
 % Program running time is saved by over 90%, the error is about 0.05% compared with ISOA method
 figure;
 ISOA_fast = calIsoA_fast(xy_deg,2^11,10^-5,1); % n has to be a power of 2
-disp((ISOA_fast-ISOA)/ISOA);%nearly 0.05%
+disp((ISOA_fast-ISOA)/ISOA);
