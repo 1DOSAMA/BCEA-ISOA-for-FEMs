@@ -1,5 +1,10 @@
 # Quantifying Eye Stability(Fixational eye movements) with the bivariate contour ellipse area (BCEA) and the within-isolines area(ISOA)
 
+
+![BCEA](https://user-images.githubusercontent.com/38465744/142725883-c19a0eef-b799-4825-9e95-d7718f991b57.png)
+![ISOA](https://user-images.githubusercontent.com/38465744/142725891-3e7cad6c-2a41-4d7b-bebf-e43572d99de5.png)
+
+
 Refecences:
 
 1) Castet, E., & Crossland, M. (2012). Quantifying eye stability during a fixation task: a review of definitions and methods. Seeing and Perceiving, 25(5), 449-469.
