@@ -43,7 +43,7 @@ if isPlot==1
     pcolor(X1,Y1,p_Gaus);
     shading interp; 
     colorbar; colormap(flipud(hot));alpha(0.7);hold on
-    xlabel('X');ylabel('Y');title('BCEA Method')
+    xlabel('Position X(degree)');ylabel('Position Y(degree)');title('BCEA Method')
     scatter(x_deg',y_deg',10,'k','MarkerEdgeAlpha',0.3);hold on
     a=contour(X1,Y1,p_Gaus, [p_edge_BCEA1,p_edge_BCEA2]);
     plot(a(1,2:a(2,1)+1),a(2,2:a(2,1)+1),'b','Linewidth',2);hold on;
