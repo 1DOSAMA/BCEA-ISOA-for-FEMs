@@ -1,5 +1,5 @@
 function [index_BCEA_f,index_BCEA,density] = calBCEA(xy_deg,n,e,isPlot)
-% calIsoA_fast  Compute bivariate contour ellipse Area of fixational eye movements 
+% calBCEA  Compute bivariate contour ellipse Area of fixational eye movements 
 %
 % INPUTS:   xy_deg - an 2 by N array with continuous data
 %           n - size of the n by n grid over which the density is computed
